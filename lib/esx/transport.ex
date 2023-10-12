@@ -163,7 +163,7 @@ defmodule ESx.Transport do
       |> Funcs.merge(if present?(ts.params), do: "?" <> URI.encode_query(ts.params), else: "")
       |> URI.to_string()
 
-    if ts.trace and tries == 1, do: traceout(ts.method, url, ts.body)
+    # if ts.trace and tries == 1, do: traceout(ts.method, url, ts.body)
 
     resp =
       case ts.method do
